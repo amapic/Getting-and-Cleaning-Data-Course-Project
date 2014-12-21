@@ -1,4 +1,5 @@
-#we add data set from train and test
+
+  #we add data set from train and test
   X_test<-read.table(file="X_test.txt",header=F,sep="")
   X_train<-read.table(file="X_train.txt",header=F,sep="")
   
@@ -43,6 +44,13 @@
   datafinal[,2][datafinal[,2]=="5"]<-"STANDING"
   datafinal[,2][datafinal[,2]=="6"]<-"LAYING"
   
+  #We tidy up the column names with lower case and no parentheses nor -. We also correct the mistake with BodyBody
+  colnames(datafinal)<-gsub("\\(","",colnames(datafinal))
+  colnames(datafinal)<-gsub("\\)","",colnames(datafinal))
+  colnames(datafinal)<-gsub("-","",colnames(datafinal))
+  colnames(datafinal)<-gsub("BodyBody","Body",colnames(datafinal))
+  colnames(datafinal)<-tolower(colnames(datafinal))
   #Point 6. we calculate the mean for each variable for each couple of subject and activity
-  groupby <- datafinal %>% group_by(Subject,Activity)
+  groupby <- datafinal %>% group_by(subject,activity)
   EachActivitySubjectMean<-groupby %>% summarise_each(funs(mean))
+  
