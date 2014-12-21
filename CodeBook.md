@@ -23,12 +23,12 @@ Conversion activity id>activity name :
 
 ##datafinal
 "datafinal" is a tidy data set gathering activity name,subject and data feature measuring std() and mean() for each measurement. See the list of the 66 concerned features below.
-the "(",")","-" have been deleted from the features name and they have been passed in lower case.
+the "(",")","-" have been deleted from the features name and they have been passed in lower case. The mistake with features name containing "BodyBody" has been corrected.
 
 ##EachActivitySubjectMean
 "EachActivitySubjectMean" contains the mean for each feature measuring std() and mean() for each couple of subject and activity. See the list of the 66 concerned features below.
 "EachActivitySubjectMean" has 180 rows. Each one of the 30 persons passing the test did the 6 activity.
-the "(",")","-" have been deleted from the features name and they have been passed in lower case.
+the "(",")","-" have been deleted from the features name and they have been passed in lower case. The mistake with features name containing "BodyBody" has been corrected.
 
 #dimension of features results in variable "EachActivitySubjectMean" and "datafinal"
 every results given by feature whose name contains "acc" are in g.
