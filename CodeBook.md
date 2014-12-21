@@ -20,6 +20,8 @@ Conversion activity id>activity name :
 5/STANDING
 6/LAYING
 
+each row of "data","dataactivity","datasubject" concerns the same measurement.
+
 "datafinal" is a tidy data set containing activity name,subject and data feature containig std() and mean() for each measurement.
 The name of the "datafinal" columns are subject,Activity and the name of each feature.
 
